@@ -6,14 +6,14 @@
 \subsection{Requerimientos}
 \subsubsection{Conversor de expresión regular a autómata finito determinista}
 Los requerimientos son simples, se debe poder especificar el alfabeto (conjunto de símbolos que constituirán la expresión regular) y la expresión regular en sí.\\
-Luego, visualizar el autómata finito determinista, que se corresponde con la expresión regular ingresada, en cualquiera de sus dos modalidades: \\
+Convertir la expresión regulr en un autómata finito determinista. Luego generar una imagen para visualizar el autómata finito determinista, que se corresponde con la expresión regular ingresada, en cualquiera de sus dos modalidades: \\
 Diagrama de transición de estados o tabla de transición de estados.
 
 \subsection{El algoritmo}
 Dada una expresión regular R, se le agrega el marcador final # convirtiéndola en una expresión regular aumentada R#,
-luego se construye un árbol sintáctico para dicha expresión regular, después se calculan las cuatro funciones: \\
-anulable, primera posición, siguiente posición y ultima posición haciendo recorridos sobre el árbol T.
+luego se construye un árbol sintáctico para dicha expresión regular, anotando las posiciones de los simbolos que esten en dicha expresión regular, después se calculan las cuatro funciones: \\
+anulable, primera posición, siguiente posición y ultima posición haciendo recorridos sobre el árbol T. Determinamos los estados del AFD utilizando los siguientes y marcamos el estado inical y los finales.
 \subsubsection{Construcción del árbol sintáctico}
-Se pueden empezar desde las hojas hacia la raíz o viceversa, cada nodo puede ser una concatenación • , una disyunción │ o una estrella de Kleen *, 
+Se pueden empezar desde las hojas hacia la raíz o viceversa, cada nodo puede ser una concatenación • , una disyunción │, cerradura positiva + o una estrella de Kleen *, 
 (los paréntesis se ignoran)
 \end{document}
